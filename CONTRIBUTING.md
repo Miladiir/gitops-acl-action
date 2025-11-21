@@ -73,6 +73,17 @@ Dependabot will automatically create PRs to update pinned actions. Manual update
 3. Testing the changes
 4. Creating a PR with a clear description of what's being updated
 
+### Maintaining Documentation Examples
+
+**Important:** Dependabot automatically updates action references in `action.yml` and `.github/workflows/` files, but it **does not** update code examples in markdown documentation files like README.md.
+
+When Dependabot updates action versions in `action.yml`:
+1. Review the README.md file to check if examples need updating
+2. Update the pinned commit SHAs in the README examples to match
+3. Include these documentation updates in the same PR or a follow-up commit
+
+This ensures users always have current examples showing the correct pinning format.
+
 ## Questions?
 
 If you have questions about these practices or need help implementing them, please open an issue for discussion.
