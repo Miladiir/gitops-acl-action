@@ -52,6 +52,8 @@ If you want to change this name to something else, you will need to add the
 
 Copy this file to `.github/workflows/tailscale.yml`.
 
+**Security Note:** For best security practices, pin all GitHub Actions to specific commit SHAs rather than tags. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
 ```yaml
 name: Sync Tailscale ACLs
 
@@ -66,10 +68,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
       - name: Fetch version-cache.json
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
         with:
           path: ./version-cache.json
           key: version-cache.json-${{ github.run_id }}
